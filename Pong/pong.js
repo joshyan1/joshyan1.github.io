@@ -157,7 +157,7 @@ function show(){
 	if(leftPositionOfBall <= paddleWidth) {
 
 	//change direction if ball hits left side of gameboard
-		if(topPositionOfBall > positionOfPaddle1 && topPositionOfBall < positionOfPaddle1 + paddleHeight){
+		if(topPositionOfBall > positionOfPaddle1 - ballHeight && topPositionOfBall < positionOfPaddle1 + paddleHeight){
 			bounce.play();
 			leftSpeedOfBall *= -1;
 		}else{
@@ -171,7 +171,7 @@ function show(){
 	if(leftPositionOfBall >= gameBoardWidth - paddleWidth - ballHeight) {
 
 	//change direction if ball hits right side of gameboard
-		if(topPositionOfBall > positionOfPaddle2 && topPositionOfBall < positionOfPaddle2 + paddleHeight){
+		if(topPositionOfBall > positionOfPaddle2 - ballHeight && topPositionOfBall < positionOfPaddle2 + paddleHeight){
 			bounce.play();
 			leftSpeedOfBall *= -1;
 		}else{
