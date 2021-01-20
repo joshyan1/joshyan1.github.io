@@ -1,0 +1,110 @@
+body {
+	background-color:black;
+}
+
+#gameBoard {
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 120px 120px 120px 120px 120px;
+	grid-template-rows:120px 120px 120px 120px 120px;
+	justify-content:center;
+	width:600px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#gameBoard div{
+	background-color:#00FF00;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.rider{
+		background-image:url("images/rider.png");
+}
+.tree{
+		background-image:url("images/tree.png");
+}
+.flag{
+		background-image:url("images/flag.png");
+}
+.rock{
+		background-image:url("images/rock.png");
+}
+.fence{
+		background-image:url("images/fenceup.png");
+}
+.fenceside{
+		background-image:url("images/fenceside.png");
+}
+.water{
+		background-image:url("images/water.png");
+}
+.horseup{
+		background-image:url("images/horseup.png");
+}
+.horseleft{
+		background-image:url("images/horseleft.png");
+}
+.horseright{
+		background-image:url("images/horseright.png");
+}
+.horsedown{
+		background-image:url("images/horsedown.png");
+}
+.horseriderdown{
+		background-image:url("images/horsedownrider.png");
+}
+.horseriderup{
+		background-image:url("images/horseuprider.png");
+}
+.horseriderleft{
+		background-image:url("images/horseleftrider.png");
+}
+.horseriderright{
+		background-image:url("images/horserightrider.png");
+}
+.jumpup{
+		background-image:url("images/jumpup.png");
+}
+.jumpleft{
+		background-image:url("images/jumpleft.png");
+}
+.jumpdown{
+		background-image:url("images/jumpdown.png");
+}
+.jumpright{
+		background-image:url("images/jumpright.png");
+}
+.enemyleft{
+		background-image:url("images/enemyleft.png");
+}
+.enemyright{
+		background-image:url("images/enemyright.png");
+}
+.enemydown{
+		background-image:url("images/enemydown.png");
+}
+.enemyup{
+		background-image:url("images/enemyup.png");
+}
+.bridge{
+		background-color:#800020 !important;
+}
+
+.message{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0.8);
+	color:white;
+	font-family:Verdana, sans-serif;
+	font-size:8em;
+	vertical-align: top;
+	text-align: center;
+	line-height: 100vh;
+}
