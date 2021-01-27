@@ -1,0 +1,280 @@
+body {
+	background-color:black;
+}
+
+/* end and start screens */
+#endScreen{
+	display:none;
+}
+
+.screens{
+	display: block;
+	color:white;
+	margin-left:auto;
+	margin-top:auto;
+	width:100%;
+	height:960px;
+	text-align:center;
+	background-image:url("images/dungeon.jpg");
+	background-size:cover;
+	font-family:Verdana, sans-serif;
+}
+
+.screens h1{
+	font-size:90px;
+	border:3px solid white;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+	background-image:url("images/stars.gif");
+}
+
+.difficulty{
+	display:inline-block;
+	width:60px;
+	padding:10px;
+	border:3px solid white;
+	margin-top:70px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url("images/stars.gif");
+}
+
+.screens div{
+	position:relative;
+	top:40px;
+	vertical-align:top;
+	border:3px solid white;
+	padding:15px;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	width:325px;
+	background-image:url("images/stars.gif");
+	border:3px solid white;
+}  
+
+
+/* gameboard */
+#gameBoard {
+	border: 1px solid black;
+	display: none;
+	grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px;
+	grid-template-rows:120px 120px 120px 120px 120px 120px 120px 120px;
+	justify-content:center;
+	width:960px;
+	height:960px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url("images/floorsized.png"); 
+}
+
+#gameBoard div{
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:0;
+}
+
+/* ingame objects */
+.pickaxe{
+		background-image:url("images/pickaxe.png");
+}
+.tree{
+		background-image:url("images/tree.png");
+}
+.treasure{
+		background-image:url("images/treasure.png");
+}
+.spike{
+		background-image:url("images/spike.png");
+}
+.drock{
+		background-image:url("images/diamondrock.png");
+}
+.drockside{
+		background-image:url("images/goldrock.png");
+}
+.water{
+		background-image:url("images/water.png");
+}
+.playerup{
+		background-image:url("images/playerup.png");
+}
+.playerleft{
+		background-image:url("images/playerleft.png");
+}
+.playerright{
+		background-image:url("images/playerright.png");
+}
+.playerdown{
+		background-image:url("images/playerdown.png");
+}
+.playerpickdown{
+		background-image:url("images/playerdownpick.png");
+}
+.playerpickup{
+		background-image:url("images/playeruppick.png");
+}
+.playerpickleft{
+		background-image:url("images/playerleftpick.png");
+}
+.playerpickright{
+		background-image:url("images/playerrightpick.png");
+}
+.jumpup{
+		background-image:url("images/jumpup.png");
+}
+.jumpleft{
+		background-image:url("images/jumpleft.png");
+}
+.jumpdown{
+		background-image:url("images/jumpdown.png");
+}
+.jumpright{
+		background-image:url("images/jumpright.png");
+}
+.enemyleft{
+		background-image:url("images/enemyleft.png");
+}
+.enemyright{
+		background-image:url("images/enemyright.png");
+}
+.enemydown{
+		background-image:url("images/enemydown.png");
+}
+.enemyup{
+		background-image:url("images/enemyup.png");
+}
+.bridge{
+		background-image:url("images/bridge.png") !important;
+		z-index:1;
+}
+
+/*message and clickables*/ 
+.message{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0.9);
+	color:white;
+	font-family:'Verdana', sans-serif;
+	font-size:6em;
+	vertical-align: top;
+	text-align: center;
+	padding-top:300px;
+}
+
+.message div{
+	font-size:30px;
+}
+
+.click{
+	font-size:30px;
+	text-decoration:underline;
+	padding-top:30px;
+}
+
+#infopage{
+	background-image:url("images/stars.gif");
+}
+
+#infopage div{
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px;
+	margin-top:50px;
+	font-size:20px;
+
+}
+
+#infopage h1{
+	font-size:40px;
+
+}
+
+#infopage{
+	background-color:rgb(0, 0, 0);
+	padding-top:0px;
+}
+
+
+/*game panel*/
+#panel {
+	background-color:#444444;
+	display:none;
+	position: relative;
+	border: 1px solid black;
+	outline: 3px solid white;
+	outline-offset: -6px;
+	padding-left: 5px;
+	width: 960px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	vertical-align: top;
+	font-family: 'MS Gothic', sans-serif;
+	font-weight: bold;
+	font-size:1.5em;
+}
+
+#pauseicon {
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	text-align: center;
+	width: 40px;
+}
+
+#level{
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	left: 10px;
+	text-align: left;
+	width: 336px;
+}
+
+#lives{
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	right: 10px;
+	text-align: right;
+	width: 440px;
+}
+
+#timer{
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	left: 0px;
+	text-align:left;
+	width: 40px;
+}
+
+#timerimage{
+	display: inline-block;
+	position: relative;
+	top: 11px;
+	left:2px;
+	height:40px;
+}
+
+/* light box css */
+.hidden{
+	display:none;
+}
+
+.unhiddden{
+	display:block;
+}
+/* end */
+
+
+
+
