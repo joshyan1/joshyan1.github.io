@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Albert and Simon's Adventure</title>
+    
+    <!-- include an external style sheet -->
+    <link rel="stylesheet" href="style.css">  
+    
+
+  </head>
+  
+  <body>
+	<div class="screens" id="startScreen">
+		<h1 id="welcome">Jeremy's Mining Quest!</h1>
+		<div id="instructions" class="click" onclick="displayInstructions()">Instructions </div>
+		<br>
+		<div id="play" class="click" onclick="startGame()">Play</div>
+		<br>
+		<p id="easy" class="difficulty" onclick="chooseDifficulty(1)">Easy</p>
+		<p id="medium" class="difficulty" onclick="chooseDifficulty(2)">Medium</p>
+		<p id="hard" class="difficulty" onclick="chooseDifficulty(3)">Hard</p>
+		<p id="insane" class="difficulty" onclick="chooseDifficulty(4)">Insane</p>
+
+	</div>
+
+	<div class="screens" id="endScreen">
+		<h1 id="welcome">Congratulations!</h1>
+		<div id="info"></div>
+		<div id="play" class="click" onclick="startGame()">Play Again</div>
+		<div class="click" onclick="returnHome()">Return Home</div>
+	</div>
+	
+	<div id="panel"> 
+		<img class="controls" id="timerimage" alt="timer" src="images/timer.png">
+		<div class="controls" id="timer">120s</div>
+		<div class="controls" id="level">Level: 1</div>
+		<img class="controls" id="pauseicon" src="images/pause.png" alt="Pause icon" onclick="pauseGame()">
+		<div class="controls" id="lives">Lives: 3</div>
+	</div>
+	<div id="gameBoard">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</div>
+	
+	<div id="messages">
+		<div class="message" id="infopage">
+			<h1>Objective</h1>
+			<div>The goal of this game is to bypass the dungeons and collect all the treasure as Jeremy the Miner without losing all of your lives.<br>
+			 In the game, you are stuck in a dungeon without your pickaxe. <br>To beat each level, you must find your pickaxe and then mine your way through the rocks to grab the treasure. 
+			 <br>At the start of the game, you have three lives, but if you run into a zombie, one of your lives will be lost.
+			 <br>If all three of your are lost or if you run out of time, you lose!
+			<br>
+			<h1>Controls</h1>
+			<div id="controlsexplanation">Use the arrow keys to move.
+			<br>To pause the game, press the escape key or the pause button at the top of the game. 
+			<br>There are four difficulties which determine how much time you have: 
+			<br>Easy (120s), Medium (75s), Hard (40s) and Insane (20s). 
+			<br>The default is Easy.</div>
+			<div class="click" onclick="startGame()">Start Game</div>
+			<div class="click" onclick="returnHome()">Return Home</div>
+			</div>
+		</div>
+
+		<div class="message" id="lose">Game Over...
+			<br><br>
+			<div id="losereason">You Ran Out Of Lives</div>
+			<br>
+			<div class="click" onclick="startGame()">Restart</div>
+			<br>
+			<div class="click" onclick="returnHome()">Return Home</div>
+		</div>
+		
+		<div class="message" id="levelup">Next Level...
+			<br><br>
+			<div>Loading...</div>
+		</div>
+		
+		<div class="message" id="lifeLost">You Lost A Life
+			<br><br>
+			<div class="click" id="retry" onclick="loadLevel()">Retry</div>
+			<br>
+			<div class="click" onclick="returnHome()">Return Home</div>
+		</div>
+		
+		<div class="message" id="gamePaused">
+			Game Paused...
+			<br><br>
+			<div id="resume" onclick="resumeGame()" class="click">Resume</div>
+			<br>
+			<div class="click" onclick="returnHome()">Return Home</div>
+		</div>
+		
+	</div>
+	
+	
+	<!-- include an external JavaScript file -->
+    <script src="game.js"></script>
+  </body>
+  
+</html>
