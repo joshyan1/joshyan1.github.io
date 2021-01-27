@@ -245,6 +245,12 @@ function tryToMove(direction){
 
 				//get class of box after jump
 				nextClass = gridBoxes[currentLocationOfPlayer].className;
+				
+				//die if zombie
+				if(gridBoxes[currentLocationOfPlayer].className.includes("enemy")){
+					dead();
+					return;	
+				}
 
 				//show player and rider after landing
 				gridBoxes[currentLocationOfPlayer].className = nextClass2;
