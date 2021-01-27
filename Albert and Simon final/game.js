@@ -458,7 +458,7 @@ function endGame(){
 
 	}//if
 	else{
-
+		
 	document.getElementById("gameBoard").style.display = "none";
 	document.getElementById("panel").style.display = "none";
 	document.getElementById("endScreen").style.display = "block";
