@@ -104,7 +104,6 @@ function returnHome(){
 	document.getElementById("gameBoard").style.display = "none";
 	document.getElementById("endScreen").style.display = "none";
 	document.getElementById("panel").style.display = "none";
-	console.log("called clear")
 	gamePaused = false;
 
 }//returnHome
@@ -296,7 +295,6 @@ function levelUp(nextClass){
 			setTimeout(function(){
 			document.getElementById("levelup").style.display = "none";
 			currentLevel++;
-			console.log("current level is " + currentLevel);
 			loadLevel();
 			}, 1000);//setTimeout
 		}//if
@@ -321,7 +319,6 @@ function loadLevel(){
 	
 	//load board
 	document.getElementById("level").innerHTML = "Level: " + (currentLevel + 1);
-	console.log(gridBoxes.length);
 	for(i = 0; i < gridBoxes.length; i++){
 		gridBoxes[i].className = levelMap[i];
 		if(levelMap[i].includes("player")){
@@ -454,7 +451,6 @@ function endGame(){
 	clearTimeout(currentAnimation);
 	window.clearInterval(controlTime);
 	stopInput = true;
-	console.log("Endgame was called, lives is " + lives);
 
 	if(lives == 0){
 
